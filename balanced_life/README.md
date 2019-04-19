@@ -1,3 +1,5 @@
+Just like how we are learning how to program games to work on computers, we must learn how to program self care habits into our minds. 
+
 <!-- # Physical 
 #     Make sure you get enough sleep each night 
 #         How much sleep are you getting? 
