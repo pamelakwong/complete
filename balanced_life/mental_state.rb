@@ -44,7 +44,7 @@ class Mental_State
         Mental_State.developing.fear += 3
     end
 
-    def imposter_syndrome(overwhelming)  #input: ("iamnotgoodenough" * 100 + "itsokay")
+    def imposter_syndrome(overwhelming)  #input: (["iamnotgoodenough" * 100] + ["itsokay"])
         return "itsokay" if overwhelming == "itsokay"
         imposter_syndrome(overwhelming[1..-1])
     end
