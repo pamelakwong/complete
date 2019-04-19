@@ -1,6 +1,6 @@
 Like how we're learning to program games into computers, we also must learn how to program healthy habits into our minds for a balanced lifestyle.
 
-Balance: Small Problems ---> Big Problems 
+Balance_Life: Small Problems ---> Big Problems 
 Emotional State instance(s) are contained in Mental State. 
 Emotional State instance(s) are passed into Physical State. 
 Mental State instance(s) are passed into Social State. 
