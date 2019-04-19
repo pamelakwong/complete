@@ -34,8 +34,8 @@ class Emotional_State
     end
 
     def shed_tears 
-        # Must increment endorphins in social_state 
-        puts "You have shedded tears. It is okay to cry. When you cry you also release endorphins."
+        # Must increment endorphins in Social_State Class. 
+        puts "You have shed tears. It is okay to cry. When you cry you also release endorphins."
         @sadness -= 11
         @enjoyment += 1
 
