@@ -1,4 +1,4 @@
-# Physical 
+<!-- # Physical 
 #     Make sure you get enough sleep each night 
 #         How much sleep are you getting? 
 #         @hours_of_sleep = int
@@ -55,4 +55,4 @@
 
 class Balance 
 
-end
+end -->
