@@ -1,14 +1,15 @@
 Like how we're learning to program games into computers, we also must learn how to program healthy habits into our minds for a balanced lifestyle.
 
 Balance_Life: Small Problems ---> Big Problems 
-Emotional State instance(s) are contained in Mental State. 
-Emotional State instance(s) are passed into Physical State. 
-Mental State instance(s) are passed into Social State. 
+    Emotional State instance(s) are contained in Mental State. 
+    Emotional State instance(s) are passed into Physical State. 
+    Mental State instance(s) are passed into Social State. 
 
 References: 
-Atlas of Emotions supported by Dalai Lama and Paul Eckman
-W2D2 Self Care Impromptu Lecture
+    Atlas of Emotions supported by Dalai Lama and Paul Eckman
+    W2D2 Self Care Impromptu Lecture
 
+Prospective Reference to Look Into: The Power of Habit by Charles Duhigg
 <!-- # Physical 
 #     Make sure you get enough sleep each night 
 #         How much sleep are you getting? 
