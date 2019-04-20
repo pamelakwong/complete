@@ -11,15 +11,28 @@ class Mental_State
         @energy = energy
         @fun_activities = ["cooking", "sports", "games", "tidy" ]
         @room = true 
+        @ate = false 
     end
 
     def cut_down_on_making_decisions
         #outfit, places to eat
+        time_capsule_closet = [["shirt", "pants"], ["dress"], ["shirt", "skirt"]]
+        planned_outfits = []
+        (1..5).each do |day|
+            planned_outfits << time_capsule_closet.sample
+        end
+        planned_outfits 
+    end
+
+    def ate
+        @ate = true   
     end
 
     def breaks 
         #lunch #afternoon 
-        Mental_State.developing.enjoyment += 100
+        if @ate 
+            Mental_State.developing.enjoyment += 100
+        end
     end
 
     def weekend 
