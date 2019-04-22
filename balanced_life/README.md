@@ -6,7 +6,7 @@ Balance_Life: Small Problems ---> Big Problems
     Mental State instance(s) are passed into Social State. 
 
 References: 
-    Atlas of Emotions supported by Dalai Lama and Paul Eckman
+    [Atlas of Emotions supported by Dalai Lama and Paul Eckman](http://atlasofemotions.org/)
     W2D2 Self Care Impromptu Lecture
 
 Prospective Reference to Look Into: The Power of Habit by Charles Duhigg
