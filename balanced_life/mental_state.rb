@@ -1,10 +1,10 @@
 require_relative "emotional_state"
 
 class Mental_State
-    def self.developing
-        Emotional_State.new(3, 4, 5, 6, 7)
-    end
-
+    # def self.developing
+    #     Emotional_State.new(3, 4, 5, 6, 7)
+    # end
+    attr_accessor :decision_fatigue, :energy, :fun_activities, :room, :ate, :developing
     def initialize(decision_fatigue, energy) 
         # @routine = routine 
         @decision_fatigue = decision_fatigue
@@ -12,6 +12,7 @@ class Mental_State
         @fun_activities = ["cooking", "sports", "games", "tidy" ]
         @room = true 
         @ate = false 
+        @developing = Emotional_State.new(3, 4, 5, 6, 7)
     end
 
     def cut_down_on_making_decisions
@@ -31,13 +32,13 @@ class Mental_State
     def breaks 
         #lunch #afternoon 
         if @ate 
-            Mental_State.developing.enjoyment += 100
+            developing.enjoyment += 100
         end
     end
 
     def weekend 
         @fun_activities.sample
-        Mental_State.developing.enjoyment += 100
+        developing.enjoyment += 100
         @energy += 100
     end
 
@@ -54,7 +55,7 @@ class Mental_State
 
     def anxiety 
         # see atlas of emotions for more reference between fear & anxiety
-        Mental_State.developing.fear += 3
+        developing.fear += 3
     end
 
     def imposter_syndrome(overwhelming)  #input: (["iamnotgoodenough" * 100] + ["itsokay"])
@@ -77,6 +78,11 @@ class Mental_State
         while questioning == "What is life?"
             puts "Forever wondering..."
         end
+    end
+
+    def reminisce(emotion) 
+        # Memories are knowledge themselves
+        # But reminiscing is iterating through an array of memories, picking that specific memory and reframing it with an emotion.
     end
 
 end
