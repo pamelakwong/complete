@@ -1,17 +1,17 @@
+require_relative "emotions"
 class Emotional_State
-    attr_accessor :anger, :fear, :disgust, :sadness, :enjoyment
+    def initialize
+        @surfacing = Emotions.new(1, 2, 3, 4, 5)
 
-    def initialize(anger, fear, disgust, sadness, enjoyment)
-        @anger = anger 
-        @fear = fear 
-        @disgust = disgust 
-        @sadness = sadness 
-        @enjoyment = enjoyment 
-
-        # will be in private 
+        # will be in private => helper method: resurfaced_feelings 
         @suppressed_feelings = 0 
     end
 
+    def imbalanced_feelings?
+        @surfacing.average_feeling < 8.6 
+    end
+
+    #----------------------------------
     # Measure the lows and extremes of each emotion
     # Relate to The Atlas of Emotions
     # How does this radar relate to other Classes?
@@ -20,13 +20,6 @@ class Emotional_State
 
     end
 
-    def imbalanced_feelings?
-        sum = @anger + @fear + @disgust + @sadness + @enjoyment 
-        avg = sum / 5.0 
-        avg > 50 ? "take a break" : shed_tears 
-    end
-
-    #----------------------------------
     # Have to consider which negative & positive emotions are inserted into the following methods.
     # an emotion that has an exceptionally high #
     def alert
@@ -39,6 +32,7 @@ class Emotional_State
     end
 
     #----------------------------------
+    # Use #radar, #alert, #okay to justify and define the methods below 
 
     def pat_myself_on_the_back
         @enjoyment += 11
