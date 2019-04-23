@@ -1,10 +1,25 @@
-Like how we're learning to program games into computers, we also must learn how to program healthy habits into our minds for a balanced lifestyle.
-
 # Balanced_Life 
-## Tackle big problems into small problems.
+Tackle big problems into small problems. 
+
+## Aproach
+**Problem:** How to strive forward in a fast paced learning environment?
+
+**Intention:** Just like how we’re learning to program, we must acknowledge our emotional, mental, physical and social states. And then, learn to program healthy habits into our minds.
+
+### Classes
+Physical State
+
+Mental State
+
+Social State
+
+Emotional State
+
+Emotions
+
 
 ## References
-* [Atlas of Emotions supported by Dalai Lama][emotions]
 * W2D2 Impromptu Lecture
+* [Atlas of Emotions supported by Dalai Lama][emotions]
 
 [emotions]: http://atlasofemotions.org/#introduction/
