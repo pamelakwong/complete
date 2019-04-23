@@ -3,8 +3,4 @@ Like how we're learning to program games into computers, we also must learn how 
 # Balanced_Life Tackle big problems into small problems.
 
 ## References
-    * [Atlas of Emotions supported by Dalai Lama][emotions]
-    * W2D2 Self Care Impromptu Lecture
-
-   [emotions]: http://atlasofemotions.org/
-## Prospective Reference to Look Into The Power of Habit by Charles Duhigg
+* W2D2 Impromptu Lecture
