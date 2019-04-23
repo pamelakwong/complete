@@ -5,7 +5,7 @@ class Mental_State
     # def self.developing
     #     Emotional_State.new(3, 4, 5, 6, 7)
     # end
-    attr_accessor :routine, :decision_fatigue, :energy, :fun_activities, :developing 
+    attr_accessor :routine, :decision_fatigue, :energy, :fun_activities, :developing, :endorphins
     def initialize(routine, decision_fatigue, energy)
         # what does the routine variable do?! 
         @routine = routine 
@@ -13,6 +13,7 @@ class Mental_State
         @energy = energy
         @fun_activities = ["cooking", "playing games", "walking", "tidying"]
         @developing = Emotional_State.new(3, 4, 5, 6, 7)
+        @endorphins = 0
     end
 
     def existential_crisis(questioning)
