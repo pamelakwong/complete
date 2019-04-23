@@ -12,6 +12,9 @@ class Mental_State
         @decision_fatigue = decision_fatigue
         @energy = energy
         @fun_activities = ["cooking", "playing games", "walking", "tidying"]
+        
+        ## BECAUSE I CHANGED THE INITIALIZATION METHOD FOR EMOTIONAL STATE
+        ## I MUST ADJUST HOW I USE @DEVELOPING 
         @developing = Emotional_State.new(3, 4, 5, 6, 7)
         @endorphins = 0
     end
