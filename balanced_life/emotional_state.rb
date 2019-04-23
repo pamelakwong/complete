@@ -38,8 +38,8 @@ class Emotional_State
     # Relate to The Atlas of Emotions
     # How does this radar relate to other Classes?
     # OH! MUST INCLUDE THIS METHOD IN WELL_BEING 
-    def radar 
-    
+    def overflowing_emotions
+        @surfacing.average_feeling > 8.6 
     end
 
     # Have to consider which negative & positive emotions are inserted into the following methods.

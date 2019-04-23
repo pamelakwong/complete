@@ -11,6 +11,9 @@ class Well_Being
     # I set out to learn and change the world. 
 
     # At the end of each day, acknowledge what you accomplished.
+    
+    #Goal: Emotions are balanced. 
+    
     def recap 
 
     end

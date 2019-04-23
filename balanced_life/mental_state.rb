@@ -15,7 +15,7 @@ class Mental_State
         
         ## BECAUSE I CHANGED THE INITIALIZATION METHOD FOR EMOTIONAL STATE
         ## I MUST ADJUST HOW I USE @DEVELOPING 
-        @developing = Emotional_State.new(3, 4, 5, 6, 7)
+        @developing = Emotional_State.new
         @endorphins = 0
     end
 
@@ -44,7 +44,7 @@ class Mental_State
     # Pass in an instance of Emotional State and see how I can incorporate it into this method. 
     def anxiety 
         # see atlas of emotions for more reference between fear & anxiety
-        developing.fear += 3
+        developing.surfacing.fear += 3
         inner_space 
     end
 
@@ -55,13 +55,15 @@ class Mental_State
     end
 
     def you_are_not_your_emotions
-        if developing 
+        if !developing.balanced? 
             puts "Emotions do not define you. Remember to breathe and recenter yourself"
+            return true 
         end
+        false 
     end
 
     def breathing? 
-        !anxiety && !you_are_not_your_emotions
+        !anxiety && you_are_not_your_emotions
     end
 
     def meditate 

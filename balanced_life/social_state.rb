@@ -1,28 +1,35 @@
 require_relative "emotional_state"
 
 class Social_State
-    attr_reader :emotional_state, :network
-    def initialize(emotional_state = Emotional_State.new)
+    attr_reader :situation, :network
+    def initialize(situation = Emotional_State.new)
         @network = {}
-        @emotional_state = emotional_state
+        @situation = situation
     end
 
-    def make_friends(friend)
-        @network[friend] = true 
+    # Pass in friend "name" and Emotional_State instance 
+    def make_friends(friend, emotional_state)
+        network[friend] = emotional_state 
     end
 
     def converse 
-        emotional_state.laugh 
+        situation.laugh 
     end
 
     def help_others 
-        emotional_state.encourage_each_other
+        # two situations 
+        # if situation is low
+        # if friend's emotional_state is low, too and increase that particular emotion
+        network.each do |friend, f_emotional_state|
+            situation.encourage_each_other if f_emotional_state.imbalanced_feelings? 
+        end
     end
 
     def voice_vulnerability 
-        if emotional_state.cowering 
-            puts "Reach out to someone. You are not alone."
+        if situation.cowering 
+            puts "Reach out to someone. You are not alone. Afterwards, let it go and laugh it out. Why?"
         end
+        situation.laugh 
     end
 
 end
