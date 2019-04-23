@@ -90,14 +90,9 @@ class Emotions
     end
 
     attr_accessor :anger, :fear, :disgust, :sadness, :enjoyment
-    def initialize(anger, fear, disgust, sadness, enjoyment)
-        raise "not in range" if !Emotions.anger_stages.include?(anger) || !Emotions.fear_stages.include?(fear) || !Emotions.disgust_stages.include?(disgust) || !Emotions.disgust_stages.include?(disgust) || !Emotions.sadness_stages.include?(sadness) || !Emotions.enjoyment_stages.include?(enjoyment)
-
-        @anger = anger 
-        @fear = fear 
-        @disgust = disgust 
-        @sadness = sadness 
-        @enjoyment = enjoyment 
+    def initialize(emotions)
+        @anger, @fear, @disgust, @sadness, @enjoyment = emotions
+        raise "not in range" if !Emotions.anger_stages.include?(@anger) || !Emotions.fear_stages.include?(@fear) || !Emotions.disgust_stages.include?(@disgust) || !Emotions.sadness_stages.include?(@sadness) || !Emotions.enjoyment_stages.include?(@enjoyment)
     end
 
     def sum 
@@ -106,6 +101,10 @@ class Emotions
 
     def average_feeling
         avg = sum / 5.0 
+    end
+
+    def to_s 
+
     end
 
     def current_stage
