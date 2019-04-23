@@ -64,4 +64,47 @@ class Emotions
         11 => "excitement"  
     }
 
+    def self.anger_stages 
+        ANGER_STAGES.keys 
+    end
+
+    def self.fear_stages 
+        FEAR_STAGES.keys 
+    end
+
+    def self.disgust_stages 
+        DISGUST_STAGES.keys 
+    end
+
+    def self.sadness_stages 
+        SADNESS_STAGES.keys 
+    end
+
+    def self.enjoyment_stages 
+        ENJOYMENT_STAGES.keys 
+    end
+
+    attr_accessor :anger, :fear, :disgust, :sadness, :enjoyment
+    def initialize(anger, fear, disgust, sadness, enjoyment)
+        raise "not in range" if !Emotions.anger_stages.include?(anger) || !Emotions.fear_stages.include?(fear) || !Emotions.disgust_stages.include?(disgust) || !Emotions.disgust_stages.include?(disgust) || !Emotions.sadness_stages.include?(sadness) || !Emotions.enjoyment_stages.include?(enjoyment)
+
+        @anger = anger 
+        @fear = fear 
+        @disgust = disgust 
+        @sadness = sadness 
+        @enjoyment = enjoyment 
+    end
+
+    def average_feeling
+        sum = anger + fear + disgust + sadness + enjoyment 
+        avg = sum / 5.0 
+    end
+
+    def current_stage
+        puts "Anger: #{anger} "
+        puts "Fear: #{fear} "
+        puts "Disgust: #{disgust} "
+        puts "Sadness: #{sadness} "
+        puts "Enjoyment: #{enjoyment} "
+    end
 end
