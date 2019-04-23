@@ -1,30 +1,23 @@
-# To understand the world is just as important as understanding the mind.
+require "byebug"
+require_relative "emotions"
+require_relative "emotional_state"
+require_relative "social_state"
+require_relative "mental_state"
+require_relative "physical_state"
+
 class Well_Being 
-
-    # trigger => cue => action
-    # imbalanced_feelings => look into states => take action to balance feelings 
-
-    # until breathing 
-    # Being. Breathing. Being. Breathing. 
-    # I am beautiful. 
-    # I am a human being. I am simply being. I am me. 
-    # I set out to learn and change the world. 
-
-    # At the end of each day, acknowledge what you accomplished.
-    
     #Goal: Emotions are balanced. 
-    
-    def recap 
+    # Ok I tackled the small problems. 
+    # Now I need to package everything into Well_Being 
 
-    end
+    print "\nWhat is your current Emotional State?\n"
+    print "\nFor each emotion, insert a number within the given range.\n"
+    print "\nAnger: 0-6 Fear: 0-8 Disgust: 0-7 Sadness: 0-11 Enjoyment: 0-11 \n"
+    print "\nInput answer like the following example: 6 7 5 9 10 \n"
 
-    # Remember that nothing will every be prefect, but you can be satisfied that you worked with integrity and made a strong effort. 
-    def imperfection  
-        
-    end
+    input = gets.chomp.split(" ").map(&:to_i)
+    current_emotions = Emotions.new(input)
+    current_emotions.current_stage 
 
-    # We learn from mistakes and we keep on going. 
-
-    # After recapping, pat yourself on the back
-
+    puts "'We know the world only through the window of our mind. When our mind is noisy, the world is as well. And when our mind is peaceful, the world is, too. Knowing our minds is just as important as trying to change the world,' said Haemin Sunim."
 end
