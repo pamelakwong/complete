@@ -4,8 +4,7 @@ class Physical_State
         @hours_of_sleep = hours_of_sleep
         @lunch = lunch 
         @breaks = breaks
-        @shower = shower  
-        @endorphins = 0
+        @shower = shower       
     end
 
     def sleep 
@@ -23,6 +22,11 @@ class Physical_State
         lunch
     end
 
+    # Incorporate cut_down_on_making_decisions in Mental State
+    def places_to_eat 
+
+    end
+
     def take_breaks? 
         if !ate? || (breaks < 2) 
             puts "Remember to rest your eyes once awhile. The blue rays emitting from the screen is unhealthy. Also, give your brain a rest from working too hard! (: "
@@ -31,14 +35,16 @@ class Physical_State
         true 
     end
 
-    def exercise? 
-        @endorphins += 100
+    def exercise(mental_state)
+        mental_state.endorphins += 100 
+        puts "You released endorphins! Yay!!! (:"
     end
 
     def clean? 
         shower
     end
 
+    # incorporate time_capsule collection method 
     def dress_up 
         #weather #temp 
     end
