@@ -5,15 +5,14 @@ class Mental_State
     # def self.developing
     #     Emotional_State.new(3, 4, 5, 6, 7)
     # end
-    attr_accessor :routine, :decision_fatigue, :energy, :fun_activities, :inner_space 
+    attr_accessor :routine, :decision_fatigue, :energy, :fun_activities, :developing 
     def initialize(routine, decision_fatigue, energy)
         # what does the routine variable do?! 
         @routine = routine 
         @decision_fatigue = decision_fatigue
         @energy = energy
         @fun_activities = ["cooking", "playing games", "walking", "tidying"]
-        @inner_space = true 
-        # @developing = Emotional_State.new(3, 4, 5, 6, 7)
+        @developing = Emotional_State.new(3, 4, 5, 6, 7)
     end
 
     def existential_crisis(questioning)
@@ -25,13 +24,16 @@ class Mental_State
     end
 
     # Pass in an instance of Emotional State and see how I can incorporate it into this method. 
+    # Probably a sum of all the Emotional_State attributes 
     def half_full(state)
         if state != "half"
             @energy *= 2
             return "Energy is doubled: #{@energy}. You are optimistic"
-        else
+        elsif state == "half"
             @energy /= 2
             return "Energy is halved: #{@energy}. You are pessimistic."
+        else
+            puts "'The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails,' said by William Arthur Ward."
         end
     end
 
@@ -39,14 +41,23 @@ class Mental_State
     def anxiety 
         # see atlas of emotions for more reference between fear & anxiety
         developing.fear += 3
-
-        # call on inner_space 
+        inner_space 
     end
 
-    # Pass in an instance of Emotional State and see how I can incorporate it into this method. 
+    # Pass in an attribute of Emotional State and see how I can incorporate it into this method. 
     def imposter_syndrome(overwhelming)  #input: (["iamnotgoodenough" * 100] + ["itsokay"])
         return "itsokay" if overwhelming == "itsokay"
         imposter_syndrome(overwhelming[1..-1])
+    end
+
+    def you_are_not_your_emotions
+        if developing 
+            puts "Emotions do not define you. Remember to breathe and recenter yourself"
+        end
+    end
+
+    def breathing? 
+        !anxiety && !you_are_not_your_emotions
     end
 
     # Passes in an instance of Physical_State and accesses ate? method and take_breaks? method
@@ -76,7 +87,7 @@ class Mental_State
 
     def inner_space
         puts "Your surroundings are a reflection of your inner space. Try tidying if your place is a little bit chaotic. It will give you peace afterwards!" if !tidy? 
-        puts "Try meditating or exercising" if tidy.nil? 
+        puts "Try meditating or exercising" if tidy?.nil? 
     end
 
     def cut_down_on_making_decisions
