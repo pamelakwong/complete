@@ -2,16 +2,16 @@ require_relative "emotional_state"
 require_relative "physical_state"
 
 class Mental_State
-    attr_accessor :routine, :energy, :fun_activities, :developing, :endorphins
+    attr_accessor :energy, :fun_activities, :developing, :endorphins
 
-    def initialize(routine, energy)
-        # what does the routine variable do?! 
-        @routine = routine 
+    def initialize(energy, developing=Emotions.new([1, 1, 1, 1, 1]))
+        # How do I want to implement the @routine attribute 
+        # @routine = routine 
 
         @energy = energy
         @fun_activities = ["cooking", "playing games", "walking", "tidying"]
         
-        @developing = Emotional_State.new
+        @developing = developing 
         @endorphins = 0
     end
 
