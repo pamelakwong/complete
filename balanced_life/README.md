@@ -20,7 +20,7 @@ Emotional State
 Emotions
 
 ### Current Status 
-You can download the project and run/test well_being.rb in Pry 
+You can download the project and run/test `well_being.rb` in Pry 
 
 ## Dedication
 In this project, I dedicate it to my Circle TA, Andrew, who helped and believed me along the way even when I did not. I will also dedicate it to those whom I have met and have exuded patience and positivity. Words cannot express how much happiness and new found energy I hold onto now and onwards. Most of all, I dedicate to those friends who continue to work hard at App Academy! (: 
