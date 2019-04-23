@@ -18,7 +18,7 @@ You can download the project and run/test `well_being.rb` in Pry
 - [x] Emotions
 
 ## Dedication
-I dedicate this project to the people whom I have met in App Academy. Words cannot express how much patience, positivity, and robust energy I felt in the community. I will continue to move forward. Good luck to those are who are still in the program! You can do it (:
+I dedicate this project to the people whom I have met in App Academy. Words cannot express how much patience, positivity, and robust energy I felt in the community. As you continue in the program, I will continue to move forward in life, too. Good luck and wish you the best. You can do it! (:
 
 ## References
 * W2D2 Impromptu Lecture
