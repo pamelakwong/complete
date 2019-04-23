@@ -1,7 +1,7 @@
 class Emotional_State
     attr_accessor :anger, :fear, :disgust, :sadness, :enjoyment
+
     def initialize(anger, fear, disgust, sadness, enjoyment)
-        # put emotions into a hash? 
         @anger = anger 
         @fear = fear 
         @disgust = disgust 
@@ -25,6 +25,20 @@ class Emotional_State
         avg = sum / 5.0 
         avg > 50 ? "take a break" : shed_tears 
     end
+
+    #----------------------------------
+    # Have to consider which negative & positive emotions are inserted into the following methods.
+    # an emotion that has an exceptionally high #
+    def alert
+
+    end
+
+    # an emotion that has a low # 
+    def okay 
+        
+    end
+
+    #----------------------------------
 
     def pat_myself_on_the_back
         @enjoyment += 11
