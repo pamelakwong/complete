@@ -90,7 +90,7 @@ class Emotions
     end
 
     attr_accessor :anger, :fear, :disgust, :sadness, :enjoyment
-    def initialize(emotions)
+    def initialize(emotions=[1, 1, 1, 1, 1])
         @anger, @fear, @disgust, @sadness, @enjoyment = emotions
         raise "not in range" if !Emotions.anger_stages.include?(@anger) || !Emotions.fear_stages.include?(@fear) || !Emotions.disgust_stages.include?(@disgust) || !Emotions.sadness_stages.include?(@sadness) || !Emotions.enjoyment_stages.include?(@enjoyment)
     end
