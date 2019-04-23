@@ -3,8 +3,8 @@ require_relative "emotions"
 class Emotional_State
     attr_reader :suppressed_feelings
     attr_accessor :surfacing
-    def initialize
-        @surfacing = Emotions.new(1, 2, 3, 4, 5)
+    def initialize(surfacing = Emotions.new)
+        @surfacing = surfacing
 
         # will be in private => helper method: resurfaced_feelings 
         @suppressed_feelings = 0 
