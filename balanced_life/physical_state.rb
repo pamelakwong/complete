@@ -22,11 +22,6 @@ class Physical_State
         lunch
     end
 
-    # Incorporate cut_down_on_making_decisions in Mental State
-    def places_to_eat 
-
-    end
-
     def take_breaks? 
         if !ate? || (breaks < 2) 
             puts "Remember to rest your eyes once awhile. The blue rays emitting from the screen is unhealthy. Also, give your brain a rest from working too hard! (: "
@@ -42,10 +37,5 @@ class Physical_State
 
     def clean? 
         shower
-    end
-
-    # incorporate time_capsule collection method 
-    def dress_up 
-        #weather #temp 
     end
 end
