@@ -4,9 +4,9 @@ Tackle big problems into small problems.
 ## Aproach
 **Problem:** How to strive forward in a fast paced learning environment?
 
-**Intention:** Just like how we’re learning to program, we must acknowledge our emotional, mental, physical and social states. And then, learn to program healthy habits into our minds.
+**Intention:** Just like how we’re learning to program, we must acknowledge our physical, mental, social, emotional states. And then, learn to program healthy habits into our minds.
 
-### Classes
+### Classes 
 Physical State
 
 Mental State
