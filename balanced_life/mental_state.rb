@@ -61,6 +61,10 @@ class Mental_State
         !anxiety && !you_are_not_your_emotions
     end
 
+    def meditate 
+        puts "Remember to breathe...in...out" if !breathing?
+    end
+
     # Passes in an instance of Physical_State and accesses ate? method and take_breaks? method
     def rejuvenate(physical_state)
         @energy += 100 if physical_state.ate? && physical_state.take_breaks? 
