@@ -3,6 +3,7 @@ class Emotions
 
     # annoyance, frustration, exasperation, argumentativeness, bitterness, vengefulness, fury
     ANGER_STAGES = {
+        0 => "balanced",
         1 => "annoyance", 
         2 => "frustration", 
         3 => "exasperation",
@@ -13,6 +14,7 @@ class Emotions
 
     # trepidation, nervousness, anxiety, dread, desperation, panic, horror, terror
     FEAR_STAGES = {
+        0 => "balanced",
         1 => "trepidation", 
         2 => "nervousness", 
         3 => "anxiety",
@@ -25,6 +27,7 @@ class Emotions
 
     # dislike, aversion, distaste, repugnance, revulsion, abhorrence, loathing
     DISGUST_STAGES = {
+        0 => "balanced",
         1 => "dislike", 
         2 => "aversion", 
         3 => "distaste",
@@ -36,6 +39,7 @@ class Emotions
 
     # disappointment, discouragement, distraughtness, resignation, helplessness, hopelessness, misery, despair, grief, sorrow, anguish
     SADNESS_STAGES = {
+        0 => "balanced",
         1 => "disappointment", 
         2 => "discouragement", 
         3 => "distraughtness",
@@ -51,6 +55,7 @@ class Emotions
 
     # sensory pleasure, rejoicing, compassion/joy, amusement/schadenfreude, relief, peace, fiero, pride, naches, wonder, excitement, ecstasy
     ENJOYMENT_STAGES = {
+        0 => "balanced",
         1 => "sensory pleasure", 
         2 => "rejoicing", 
         3 => "compassion/joy",
@@ -95,16 +100,21 @@ class Emotions
         @enjoyment = enjoyment 
     end
 
+    def sum 
+        summed = anger + fear + disgust + sadness + enjoyment
+    end
+
     def average_feeling
-        sum = anger + fear + disgust + sadness + enjoyment 
         avg = sum / 5.0 
     end
 
     def current_stage
-        puts "Anger: #{anger} "
-        puts "Fear: #{fear} "
-        puts "Disgust: #{disgust} "
-        puts "Sadness: #{sadness} "
-        puts "Enjoyment: #{enjoyment} "
+        puts "Anger: #{ANGER_STAGES[anger]} "
+        puts "Fear: #{FEAR_STAGES[fear]} "
+
+        puts "Disgust: #{DISGUST_STAGES[disgust]} "
+        puts "Sadness: #{SADNESS_STAGES[sadness]} "
+        
+        puts "Enjoyment: #{ENJOYMENT_STAGES[enjoyment]} "
     end
 end
