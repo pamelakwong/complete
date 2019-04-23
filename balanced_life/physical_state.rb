@@ -20,13 +20,13 @@ class Physical_State
     end
 
     def ate? 
-        lunch == true 
+        lunch
     end
 
     def take_breaks? 
-        if !(ate? && breaks == 2) 
+        if !ate? || (breaks < 2) 
             puts "Remember to rest your eyes once awhile. The blue rays emitting from the screen is unhealthy. Also, give your brain a rest from working too hard! (: "
-            false 
+            return false 
         end
         true 
     end
