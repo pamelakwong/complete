@@ -20,6 +20,8 @@ class Well_Being
         
     end
 
+    # We learn from mistakes and we keep on going. 
+
     # After recapping, pat yourself on the back
 
 end
